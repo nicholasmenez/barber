@@ -1,0 +1,116 @@
+
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+<div>
+
+<h1 style="text-align: center;">
+    BOOK YOUR BARBER
+</h1>
+<p style="text-align: center;">Great Hair Doesn't Happen by Chance. It happens By Appointement!</p>
+<div class="imgcontainer">
+    <img src="../../assets/image.jpg" alt="">
+</div>
+<div class="login">
+    <h2 class="login-header">BOOK YOUR APPOINTMENT</h2>
+    <form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()">
+        
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.firstName.errors }">
+            <input type="text" placeholder="First Name" formControlName="firstName" />
+        </p>
+
+        <div *ngIf="isSubmitted && formControls.firstName.errors" class="help-block">
+            <div *ngIf="formControls.firstName.errors.required">
+                Plese enter your full name
+            </div>
+        </div>
+
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.lastName.errors }">
+            <input type="text" placeholder="Last Name" formControlName="lastName" />
+        </p>
+
+        <div *ngIf="isSubmitted && formControls.lastName.errors" class="help-block">
+            <div *ngIf="formControls.lastName.errors.required">
+                FULL
+            </div>
+        </div>
+
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+            <input type="email" placeholder="Email" formControlName="email" />
+        </p>
+
+        <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+            <div *ngIf="formControls.email.errors.required">Please enter a valid email</div>
+        </div>
+
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.contact.errors }">
+            <input type="tel" placeholder="Conatct number" formControlName="contact" />
+        </p>
+
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.barber.errors }">
+            <select type="barber" placeholder="Select Barber" formControlName="barber" >
+                <option disabled>Select Barber</option>
+                <option >Jože Britvica</option>
+                
+                
+            </select>
+        
+        </p>
+
+        <div *ngIf="isSubmitted && formControls.service.errors" class="help-block">
+            <div *ngIf="formControls.service.errors.required">
+                Please select a service
+            </div>
+        </div>
+
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.service.errors }">
+            <select type="service" placeholder="Select Service" formControlName="service" >
+                <option disabled>Select Service</option>
+                <option >Shave</option>
+                <option >Haircut</option>
+                <option >Shave + Haircut</option>
+                
+            </select>
+        
+        </p>
+
+        <div *ngIf="isSubmitted && formControls.service.errors" class="help-block">
+            <div *ngIf="formControls.service.errors.required">
+                Please select a service
+            </div>
+        </div>
+
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.date.errors }">
+            <input type="date" placeholder="Select Date" formControlName="date" />
+        </p>
+
+        <div *ngIf="isSubmitted && formControls.date.errors" class="help-block">
+            <div *ngIf="formControls.date.errors.required">
+                Please pick a date
+            </div>
+        </div>
+
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.time.errors }">
+            <input type="time" placeholder="Select Time" formControlName="time" />
+        </p>
+
+        <div *ngIf="isSubmitted && formControls.time.errors" class="help-block">
+            <div *ngIf="formControls.time.errors.required">
+                Please pick a time
+            </div>
+        </div>
+
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.price.errors }">
+            <input type="price" placeholder="Service Price" formControlName="price" />
+        </p>
+
+        
+
+        <p>
+          <a routerLink='gif'><input class="submit" type="submit" value="Book" /></a>  
+          
+        </p>
+    </form>
+</div>
+</div>
+

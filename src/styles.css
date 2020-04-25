@@ -1,0 +1,33 @@
+@import  url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css2?family=Squada+One&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@531&display=swap);
+body {
+    background: #F7E1AF;
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    font-family:'Squada One'; 
+    font-size: 58px; 
+    font-weight: 500px; 
+    letter-spacing: 1px;
+
+}
+p{
+    font-family:'Roboto Slab'; 
+    font-size: 17px; 
+    font-weight: 500px; 
+    letter-spacing: 1.8px;  
+}
+h2{
+    font-family:'Squada One'; 
+    font-size: 14px; 
+    font-weight: 500px; 
+    letter-spacing: 0.6px;
+}
+.submit{
+    font-family:'Roboto Slab'; 
+    font-size: 18px; 
+    font-weight: 400px; 
+    letter-spacing:2px;
+    background: orange;
+}
